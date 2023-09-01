@@ -5,9 +5,12 @@ import ("fmt"
 )
 
 func main() {
+	//example: 127.0.0.1:8080
+	
+	IP := "127.0.0.1:8080"
 	
 	looper: for {
-		conn, err := net.Dial("tcp", "192.168.1.33:8080")
+		conn, err := net.Dial("tcp", IP)
 		//if error doesnt equal nil it continues looping looper until it connects
 		if err != nil {
 			fmt.Println("error")
